@@ -1,0 +1,109 @@
+/* Discount Page Styles */
+
+:root {
+    --deep-brown: #3d2b1f;
+    --gold: #c5a059;
+    --light-gold: #e4d5b7;
+    --white: #ffffff;
+    --text-color: #2c1e16;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-gold);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--deep-brown);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid var(--gold);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--gold);
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0 0;
+    color: var(--white);
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--deep-brown);
+}
+
+.discount-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.discount-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid var(--gold);
+}
+
+.discount-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.discount-card h3 {
+    margin-top: 0;
+    color: var(--deep-brown);
+    font-size: 1.5em;
+}
+
+.discount-card p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--deep-brown);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 3px solid var(--gold);
+}
+
+@media (max-width: 768px) {
+    .discount-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .discount-card {
+        width: 100%;
+    }
+}
